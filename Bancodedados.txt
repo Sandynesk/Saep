@@ -1,0 +1,89 @@
+https://bit.ly/4eijcSN
+
+
+Banco: 
+
+
+use railway;
+
+select * from usuarios;
+
+ALTER TABLE usuarios ADD email VARCHAR(100);
+ALTER TABLE usuarios ADD senha CHAR(100);
+
+
+SHOW CREATE TABLE usuarios;
+SHOW CREATE TABLE usuarios;
+
+DROP TABLE IF EXISTS posts;   -- Exclui a tabela posts se existir
+DROP TABLE IF EXISTS usuarios; -- Exclui a tabela usuarios se existir
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Identificador único do usuário
+    name_user VARCHAR(100) NOT NULL,     -- Nome do usuário
+    email VARCHAR(100) UNIQUE NOT NULL,  -- E-mail do usuário (único)
+    senha VARCHAR(255) NOT NULL          -- Senha do usuário
+);
+
+
+CREATE TABLE posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Identificador único do post
+    user_id INT,                        -- ID do usuário que criou o post (chave estrangeira)
+    title VARCHAR(255) NOT NULL,       -- Título do post
+    content TEXT NOT NULL,              -- Conteúdo do post
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,  -- Data de criação do post
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, -- Data da última atualização
+    FOREIGN KEY (user_id) REFERENCES usuarios(id)  -- Relacionamento com a tabela usuarios
+);
+
+
+
+
+
+railway:
+
+MYSQL_DATABASE
+railway
+
+
+
+MYSQL_PUBLIC_URL
+mysql://root:tujXMGYxcEeqfFsCYVEqfyjWjZdKDUbv@junction.proxy.rlwy.net:15749/railway
+
+
+
+MYSQL_ROOT_PASSWORD
+tujXMGYxcEeqfFsCYVEqfyjWjZdKDUbv
+
+
+
+MYSQL_URL
+mysql://root:tujXMGYxcEeqfFsCYVEqfyjWjZdKDUbv@mysql.railway.internal:3306/railway
+
+
+
+MYSQLDATABASE
+railway
+
+
+
+MYSQLHOST
+mysql.railway.internal
+
+
+
+MYSQLPASSWORD
+tujXMGYxcEeqfFsCYVEqfyjWjZdKDUbv
+
+
+
+MYSQLPORT
+3306
+
+
+
+MYSQLUSER
+root
+
+
+

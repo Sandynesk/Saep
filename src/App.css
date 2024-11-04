@@ -1,38 +1,173 @@
-.App {
-  text-align: center;
+/* Estilos Gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Cor de fundo suave */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilos da Página de Login */
+.login {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #fff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.login h2 {
+  color: #333; /* Cor do texto */
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Largura do formulário */
+}
+
+.login label {
+  margin: 10px 0 5px;
+  color: #555; /* Cor do rótulo */
+}
+
+.login input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login button {
+  padding: 10px;
+  background-color: #4CAF50; /* Cor do botão */
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.login button:hover {
+  background-color: #45a049; /* Cor do botão ao passar o mouse */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos da Home Page */
+.home {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Limite de largura */
+  margin: 0 auto; /* Centraliza */
 }
+
+.column {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile-column {
+  background-color: #fff; /* Cor de fundo da coluna de perfil */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dish-list-column {
+  background-color: #fff; /* Cor de fundo da coluna de pratos */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.empty-column {
+  background-color: #f9f9f9; /* Cor de fundo da coluna vazia */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.empty-column h2 {
+  color: #333;
+}
+
+/* Estilos da Lista de Pratos */
+.dish-list h2 {
+  color: #333; /* Cor do título da lista */
+}
+
+.dish-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dish-list li {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  transition: transform 0.2s;
+}
+
+.dish-list li:hover {
+  transform: scale(1.02); /* Efeito de hover nos pratos */
+}
+
+
+.comment-section {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.comment-section h3 {
+  margin: 0 0 10px;
+}
+
+.comment-section form {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.comment-section input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.comment-section button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: #45a049;
+}
+
+.comment-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-section li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+  
